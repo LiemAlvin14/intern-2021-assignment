@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class Capitalization {
 
-    private static String capitalize (String input) {
+    public static String capitalize (String input) {
         //TODO Add logic to capitalize String Input
         //TODO Input = "I want to lEARN JAVA"
         //TODO Output = "I Want To Learn Java"
@@ -31,7 +31,6 @@ public class Capitalization {
         for(Book b:booksInput){
             String author = capitalize(b.getAuthor());
             String title = capitalize(b.getTitle());
-            System.out.println(author+" "+title);
             if(result.get(author)!=null){
                 result.get(author).addAll(Collections.singletonList(title));
             }else{

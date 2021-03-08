@@ -2,7 +2,7 @@ package com.intern.demo;
 
 import lombok.*;
 
-
+@Data
 public class ImportedBook extends Book{
     private String translator;
 
