@@ -1,5 +1,6 @@
 package com.intern.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@SpringBootApplication public class DemoApplication {
+@SpringBootApplication
+public class DemoApplication {
+    @Autowired
+    Capitalization capitalization;
+
+    public DemoApplication() {
+        String early = "test test 2 sdfsdf ella     ";
+        String s = capitalization.capitalize(early);
+        System.out.println(early);
+        System.out.println(s);
+    }
 
     public static void main(String[] args) {
         // todo EXPECTED RESULT:
@@ -26,9 +37,10 @@ import java.util.List;
         // TODO CREATE A NEW LIST OBJECT CALLED "inputs" THAT CONSIST OF ALL BOOKS STATED ABOVE
 
         // TODO CALL CAPITALIZATION convertToMap WITH "inputs" AS REQUEST AND PRINT IT OUT
-
+        new DemoApplication();
 
 //        SpringApplication.run(DemoApplication.class, args);
+
     }
 
 }
