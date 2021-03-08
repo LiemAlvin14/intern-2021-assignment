@@ -4,5 +4,11 @@ import lombok.*;
 
 @Data
 public class Book {
-    protected String author,title;
+    private String author;
+    private String title;
+
+    public Book(String author, String title) {
+        this.author = author;
+        this.title = title;
+    }
 }
